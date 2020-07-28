@@ -7,7 +7,6 @@ C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\sisev_webapi.runtimeconfig.dev.json
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\sisev_webapi.dll
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\sisev_webapi.pdb
-C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.csprojAssemblyReference.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.AssemblyInfoInputs.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.AssemblyInfo.cs
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.RazorTargetAssemblyInfo.cache
@@ -40,5 +39,9 @@ C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.csprojAssemblyReference.cache
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.csproj.CoreCompileInputs.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\sisev_webapi\obj\Debug\netcoreapp3.1\sisev_webapi.MvcApplicationPartsAssemblyInfo.cache

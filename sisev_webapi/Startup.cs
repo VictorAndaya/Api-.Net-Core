@@ -27,7 +27,8 @@ namespace sisev_webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TestVocacionalISCContext>(options => options.UseMySql(Configuration.GetConnectionString("TestVocacionalISCContext")));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
