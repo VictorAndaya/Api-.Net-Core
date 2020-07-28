@@ -21,7 +21,16 @@ namespace sisev_webapi.Controllers
                 return Ok(lst);
             }
         }
-        [HttpPost]
+        [HttpGet("{getcarrera}")]
+        public ActionResult GetById([FromBody] Models.Request.CarrerasRequest model)
+        {
+            using (Models.DBModels.TestVocacionalISCContext db = new Models.DBModels.TestVocacionalISCContext())
+            {
+                var lst = db.Carreras.Find(model.IdCarrera);
+                return Ok(lst);
+            }
+        }
+        [HttpPost("{setcarrera}")]
         public ActionResult Post([FromBody] Models.Request.CarrerasRequest model)
         {
             using (Models.DBModels.TestVocacionalISCContext db = new Models.DBModels.TestVocacionalISCContext())
@@ -33,7 +42,7 @@ namespace sisev_webapi.Controllers
             }
             return Ok();
         }
-        [HttpPut]
+        [HttpPut("{updatecarrera}")]
         public ActionResult Put([FromBody] Models.Request.CarrerasRequest model)
         {
             using (Models.DBModels.TestVocacionalISCContext db = new Models.DBModels.TestVocacionalISCContext())
@@ -45,7 +54,7 @@ namespace sisev_webapi.Controllers
             }
             return Ok();
         }
-        [HttpDelete]
+        [HttpDelete("{deletecarrera}")]
         public ActionResult Delete([FromBody] Models.Request.CarrerasRequest model)
         {
             using (Models.DBModels.TestVocacionalISCContext db = new Models.DBModels.TestVocacionalISCContext())
