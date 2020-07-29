@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "usCnDZtNiPN9TS6+vZFyCwZJsBe/busyvmxyq4cxV3k5GZIIeNRohPsbyymQrsuZCVVOCGYMEm1uay0Ncc/Q6g==",
+  "dgSpecHash": "T/22DAkqfew6IC3QAoTB6PU+VLE8P1jt75310irUd0BsnuvRIx5QuOToXMHW/UeeGNTIeUtkxp1nCzy+rZwQow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\victo\\source\\repos\\dapper_sisev\\dapper_sisev.csproj",
+  "projectFilePath": "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
