@@ -11,36 +11,36 @@ namespace dapper_sisev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarrerasController : ControllerBase
+    public class MateriasController : ControllerBase
     {
-        private string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
+        private readonly string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
 
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Models.Carreras> lst = null;
+            IEnumerable<Models.Materias> lst = null;
             using (var db = new MySqlConnection(_connection))
             {
-                var sql = "SELECT * FROM Carreras";
-                lst = db.Query<Models.Carreras>(sql);
+                var sql = "SELECT * FROM Materias";
+                lst = db.Query<Models.Materias>(sql);
             }
             return Ok(lst);
         }
 
         [HttpGet("getbyid")]
-        public IActionResult GetById(Models.Carreras model)
+        public IActionResult GetById(Models.Materias model)
         {
-            IEnumerable<Models.Carreras> lst = null;
+            IEnumerable<Models.Materias> lst = null;
             using (var db = new MySqlConnection(_connection))
             {
-                var sql = "SELECT * FROM Carreras WHERE IdCarrera=@IdCarrera";
-                lst = db.Query<Models.Carreras>(sql,model);
+                var sql = "SELECT * FROM Materias WHERE IdMateria=@IdMateria";
+                lst = db.Query<Models.Materias>(sql, model);
             }
             return Ok(lst);
         }
 
         [HttpPost]
-        public IActionResult Set(Models.Carreras model)
+        public IActionResult Set(Models.Materias model)
         {
             int result = 0;
             string response = "";
@@ -48,14 +48,14 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "INSERT INTO Carreras(Nombre) VALUES(@Nombre)";
+                    var sql = "INSERT INTO Materias(Nombre) VALUES(@Nombre)";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se inserto correctamente la carrera";
+                    response = "Se inserto correctamente la materia";
                 else
-                    response = "No se inserto la carrera";
+                    response = "No se inserto la materia";
             }
             catch (Exception e)
             {
@@ -66,7 +66,7 @@ namespace dapper_sisev.Controllers
         }
 
         [HttpPut]
-        public IActionResult Edit(Models.Carreras model)
+        public IActionResult Edit(Models.Materias model)
         {
             int result = 0;
             string response = "";
@@ -74,14 +74,14 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "UPDATE Carreras SET Nombre=@Nombre WHERE IdCarrera=@IdCarrera;";
+                    var sql = "UPDATE Materias SET Nombre=@Nombre WHERE IdMateria=@IdMateria;";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se actualizo correctamente la carrera";
+                    response = "Se actualizo correctamente la materia";
                 else
-                    response = "No se actualizo la carrera";
+                    response = "No se actualizo la materia";
             }
             catch (Exception e)
             {
@@ -92,7 +92,7 @@ namespace dapper_sisev.Controllers
         }
 
         [HttpDelete]
-        public IActionResult Delete(Models.Carreras model)
+        public IActionResult Delete(Models.Materias model)
         {
             int result = 0;
             string response = "";
@@ -100,16 +100,16 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "DELETE FROM Carreras WHERE IdCarrera=@IdCarrera;";
+                    var sql = "DELETE FROM Materias WHERE IdMateria=@IdMateria;";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se elimino correctamente la carrera";
+                    response = "Se elimino correctamente la materia";
                 else
-                    response = "No se elimino la carrera";
+                    response = "No se elimino la materia";
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 response = e.Message;
             }

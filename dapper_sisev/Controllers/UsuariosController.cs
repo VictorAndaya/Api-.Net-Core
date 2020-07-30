@@ -13,7 +13,7 @@ namespace dapper_sisev.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        private string _connection = @"Server=localhost;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
+        private string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
 
         [HttpPost("setUsuario")]
         public IActionResult SetUsuario(Models.Usuarios model)
