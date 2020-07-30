@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\balbu\\Desktop\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj": {}
+    "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\balbu\\Desktop\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj": {
+    "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balbu\\Desktop\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
         "projectName": "dapper_sisev",
-        "projectPath": "C:\\Users\\balbu\\Desktop\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
-        "packagesPath": "C:\\Users\\balbu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balbu\\Desktop\\Api-.Net-Core\\dapper_sisev\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\balbu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
