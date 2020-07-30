@@ -69,8 +69,6 @@ C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dappe
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.csprojAssemblyReference.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.AssemblyInfoInputs.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.AssemblyInfo.cs
-C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.csproj.CoreCompileInputs.cache
-C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.RazorTargetAssemblyInfo.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.csproj.CopyComplete
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\staticwebassets\dapper_sisev.StaticWebAssets.Manifest.cache
@@ -78,3 +76,6 @@ C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dappe
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.dll
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.pdb
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.genruntimeconfig.cache
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.csproj.CoreCompileInputs.cache
+C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.MvcApplicationPartsAssemblyInfo.cache

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "T/22DAkqfew6IC3QAoTB6PU+VLE8P1jt75310irUd0BsnuvRIx5QuOToXMHW/UeeGNTIeUtkxp1nCzy+rZwQow==",
+  "dgSpecHash": "RRzaNeNDNvXrJLNflFCpmTvq0c3+lrla8JuTpFsWoDRV65cFiTuXQzbat0Mssd4+3tQu+6qCfbBiFi9GVgWX2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\victo\\Desktop\\Prolog\\docker-apache-sack\\public_html\\Api-.Net-Core\\dapper_sisev\\dapper_sisev.csproj",
   "expectedPackageFiles": [
@@ -96,6 +96,7 @@
     "C:\\Users\\victo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
