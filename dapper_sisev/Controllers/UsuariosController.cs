@@ -6,6 +6,9 @@ using Dapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using dapper_sisev.Models;
+using System.Security.Cryptography.Xml;
+using Newtonsoft.Json;
 
 namespace dapper_sisev.Controllers
 {
@@ -40,10 +43,10 @@ namespace dapper_sisev.Controllers
 
             return Ok(response);
         }
-        [HttpGet("getUsuario")]
-        public IActionResult GetUsuario(Models.Usuarios model)
+        [HttpGet("getRolUsuario")]
+        public IActionResult GetRolUsuario(Models.Usuarios model)
         {
-            string response = "";
+            string jsonData = "";
             try
             {
                 IEnumerable<Models.Usuarios> lst = null;
@@ -53,16 +56,17 @@ namespace dapper_sisev.Controllers
                     lst = db.Query<Models.Usuarios>(sql, model);
                 }
                 if (lst.Count() == 1)
-                    response = "Se encontro el usuario";
-                else
-                    response = "No se encontro";
+                {
+                    var first = lst.First();
+                    var obj = new Usuarios { Id = first.Id, Rol = first.Rol, Nombre = first.Nombre, Usuario = first.Usuario, Contrasena = first.Contrasena };
+                    jsonData = JsonConvert.SerializeObject(obj);
+                }
+                return Ok(jsonData);
             }
             catch (Exception e)
             {
-                response = e.Message;
+                return Ok(e.Message);
             }
-
-            return Ok(response);
         }
     }
 }
