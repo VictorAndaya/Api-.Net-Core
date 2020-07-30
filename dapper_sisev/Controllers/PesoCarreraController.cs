@@ -17,13 +17,13 @@ namespace dapper_sisev.Controllers
         private string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
 
         [HttpGet]
-        public IActionResult GetById(Models.PesoCarrera model)
+        public IActionResult Get()
         {
             IEnumerable<Models.PesoCarrera> lst = null;
             using (var db = new MySqlConnection(_connection))
             {
-                var sql = "SELECT * FROM PesoCarrera;";
-                lst = db.Query<Models.PesoCarrera>(sql, model);
+                var sql = "SELECT * FROM PesoCarrera";
+                lst = db.Query<Models.PesoCarrera>(sql);
             }
             return Ok(lst);
         }
