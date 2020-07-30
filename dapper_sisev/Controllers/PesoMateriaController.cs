@@ -12,24 +12,24 @@ namespace dapper_sisev.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PesoCarreraController : ControllerBase
+    public class PesoMateriaController : ControllerBase
     {
         private string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
 
-        [HttpGet]
-        public IActionResult GetById(Models.PesoCarrera model)
+        [HttpGet("getPesoMateria")]
+        public IActionResult GetById(Models.PesoMateria model)
         {
-            IEnumerable<Models.PesoCarrera> lst = null;
+            IEnumerable<Models.PesoMateria> lst = null;
             using (var db = new MySqlConnection(_connection))
             {
-                var sql = "SELECT * FROM PesoCarrera;";
-                lst = db.Query<Models.PesoCarrera>(sql, model);
+                var sql = ""; //Falta
+                lst = db.Query<Models.PesoMateria>(sql, model);
             }
             return Ok(lst);
         }
 
-        [HttpDelete]
-        public IActionResult Delete(Models.PesoCarrera model)
+        [HttpDelete("deletePesoMateria")]
+        public IActionResult Delete(Models.PesoMateria model)
         {
             int result = 0;
             string response = "";
@@ -37,14 +37,14 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "DELETE FROM PesoCarrera WHERE IdPeso=@IdPeso;";
+                    var sql = "DELETE FROM CarreraMaterias WHERE IdCarreraMateria=@IdCarreraMateria;";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se elimino correctamente el peso de la carrera";
+                    response = "La pregunta se elimino correctamente";
                 else
-                    response = "No se pudo eliminar el peso";
+                    response = "No se pudo eliminar";
             }
             catch (Exception e)
             {
@@ -54,8 +54,8 @@ namespace dapper_sisev.Controllers
             return Ok(response);
         }
 
-        [HttpPut]
-        public IActionResult Edit(Models.PesoCarrera model)
+        [HttpPut("updatePesoMateria")]
+        public IActionResult Edit(Models.PesoMateria model)
         {
             int result = 0;
             string response = "";
@@ -63,12 +63,12 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "UPDATE PesoCarrera SET IdCarrera=@IdCarrera, Peso=@Peso WHERE IdPeso=@IdPeso;";
+                    var sql = "UPDATE PesoMateria SET IdCarrera=@IdCarrera, IdMateria=@IdMateria, Peso=@Peso WHERE IdCarreraMateria=@IdCarreraMateria;";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se actualizo correctamente el peso de la carrera";
+                    response = "El peso se actualizo correctamente";
                 else
                     response = "No se actualizo el peso";
             }
@@ -80,8 +80,8 @@ namespace dapper_sisev.Controllers
             return Ok(response);
         }
 
-        [HttpPost]
-        public IActionResult Set(Models.PesoCarrera model)
+        [HttpPost("setPesoMateria")]
+        public IActionResult Set(Models.PesoMateria model)
         {
             int result = 0;
             string response = "";
@@ -89,12 +89,12 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "INSERT INTO PesoCarrera (IdCarrera, Peso) VALUES(@IdCarrera, @Peso)";
+                    var sql = "INSERT INTO CarreraMaterias (IdCarrera, IdMateria, Peso) VALUES(@IdCarrera, @IdMateria, @Peso)";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "El peso de la carrera se ha insertado correctamente";
+                    response = "El peso se agregó correctamente";
                 else
                     response = "No se inserto el peso";
             }
