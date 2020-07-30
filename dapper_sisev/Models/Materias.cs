@@ -7,7 +7,7 @@ namespace dapper_sisev.Models
 {
     public class Materias
     {
-        public int IdCarrera { get; set; }
+        public int IdMateria { get; set; }
         public string Nombre { get; set; }
     }
 }
