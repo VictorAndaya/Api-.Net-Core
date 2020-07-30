@@ -16,67 +16,20 @@ namespace dapper_sisev.Controllers
     {
         private string _connection = @"Server=192.168.99.100;Port=3306;User=root;Password=123456789;Database=TestVocacionalISC";
 
-        [HttpGet("getCarreraMateria")]
-        public IActionResult GetById(Models.CarreraMaterias model)
-        {
-            IEnumerable<Models.CarreraMaterias> lst = null;
-            using (var db = new MySqlConnection(_connection))
-            {
-                var sql = "SELECT * FROM CarreraMaterias WHERE IdCarrera=@IdCarrera AND IdMateria=@IdMateria;";
-                lst = db.Query<Models.CarreraMaterias>(sql, model);
-            }
-            return Ok(lst);
-        }
-
-        [HttpGet("getMotor")]
-        public IActionResult GetMotor(Models.CarreraMaterias model)
-        {
-            IEnumerable<Models.CarreraMaterias> lst = null;
-            using (var db = new MySqlConnection(_connection))
-            {
-                var sql = "SELECT Peso FROM CarreraMaterias WHERE IdMateria=@IdMateria;";
-                lst = db.Query<Models.CarreraMaterias>(sql, model);
-            }
-            return Ok(lst);
-        }
-
-        [HttpGet("getFinal")]
-        public IActionResult GetFinal(Models.CarreraMaterias model)
-        {
-            IEnumerable<Models.CarreraMaterias> lst = null;
-            using (var db = new MySqlConnection(_connection))
-            {
-                var sql = "SELECT IdMateria,Peso FROM CarreraMaterias WHERE IdMateria=@IdMateria AND IdCarrera=@IdCarrera;";
-                lst = db.Query<Models.CarreraMaterias>(sql, model);
-            }
-            return Ok(lst);
-        }
         [HttpGet]
-        public IActionResult GetDis()
+        public IActionResult GetById(Models.PesoCarrera model)
         {
             IEnumerable<Models.CarreraMaterias> lst = null;
             using (var db = new MySqlConnection(_connection))
             {
-                var sql = "SELECT DISTINCT IdCarrera FROM CarreraMaterias;";
-                lst = db.Query<Models.CarreraMaterias>(sql);
+                var sql = "SELECT * FROM PesoCarrera;";
+                lst = db.Query<Models.CarreraMaterias>(sql, model);
             }
             return Ok(lst);
         }
 
-        [HttpGet("getTotal")]
-        public IActionResult GetTotal(Models.CarreraMaterias model)
-        {
-            IEnumerable<Models.CarreraMateriasTotal> lst = null;
-            using (var db = new MySqlConnection(_connection))
-            {
-                var sql = "SELECT c.Nombre,SUM(Peso) as PesoTotal FROM CarreraMaterias cm JOIN Carreras c ON cm.IdCarrera = c.IdCarrera WHERE cm.IdCarrera = @IdCarrera;";
-                lst = db.Query<Models.CarreraMateriasTotal>(sql, model);
-            }
-            return Ok(lst);
-        }
-
-        [HttpPost("setCarreraMaterias")]
-        public IActionResult Set(Models.CarreraMaterias model)
+        [HttpDelete]
+        public IActionResult Delete(Models.PesoCarrera model)
         {
             int result = 0;
             string response = "";
@@ -84,14 +37,66 @@ namespace dapper_sisev.Controllers
             {
                 using (var db = new MySqlConnection(_connection))
                 {
-                    var sql = "INSERT INTO CarreraMaterias (IdCarrera, IdMateria, Peso) VALUES(@IdCarrera,@IdMateria,@Peso)";
+                    var sql = "DELETE FROM PesoCarrera WHERE IdPeso=@IdPeso;";
 
                     result = db.Execute(sql, model);
                 }
                 if (result == 1)
-                    response = "Se inserto correctamente la carrera";
+                    response = "Se elimino correctamente el peso de la carrera";
                 else
-                    response = "No se inserto la carrera";
+                    response = "No se pudo eliminar el peso";
+            }
+            catch (Exception e)
+            {
+                response = e.Message;
+            }
+
+            return Ok(response);
+        }
+
+        [HttpPut]
+        public IActionResult Edit(Models.PesoCarrera model)
+        {
+            int result = 0;
+            string response = "";
+            try
+            {
+                using (var db = new MySqlConnection(_connection))
+                {
+                    var sql = "UPDATE PesoCarrera SET IdCarrera=@IdCarrera, Peso=@Peso WHERE IdPeso=@IdPeso;";
+
+                    result = db.Execute(sql, model);
+                }
+                if (result == 1)
+                    response = "Se actualizo correctamente el peso de la carrera";
+                else
+                    response = "No se actualizo el peso";
+            }
+            catch (Exception e)
+            {
+                response = e.Message;
+            }
+
+            return Ok(response);
+        }
+
+        [HttpPost()]
+        public IActionResult Set(Models.PesoCarrera model)
+        {
+            int result = 0;
+            string response = "";
+            try
+            {
+                using (var db = new MySqlConnection(_connection))
+                {
+                    var sql = "INSERT INTO PesoCarrera (IdCarrera, Peso) VALUES(@IdCarrera, @Peso)";
+
+                    result = db.Execute(sql, model);
+                }
+                if (result == 1)
+                    response = "El peso de la carrera se ha insertado correctamente";
+                else
+                    response = "No se inserto el peso";
             }
             catch (Exception e)
             {

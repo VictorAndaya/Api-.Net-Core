@@ -119,3 +119,4 @@ C:\Users\balbu\Desktop\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper
 C:\Users\balbu\Desktop\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.pdb
 C:\Users\balbu\Desktop\Api-.Net-Core\dapper_sisev\obj\Debug\netcoreapp3.1\dapper_sisev.genruntimeconfig.cache
 C:\Users\victo\Desktop\Prolog\docker-apache-sack\public_html\Api-.Net-Core\dapper_sisev\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\balbu\Desktop\Api-.Net-Core\dapper_sisev\bin\Debug\netcoreapp3.1\System.Text.Json.dll
